@@ -42,7 +42,7 @@ public class TwoD {
     }
 
     private void Square(){
-        System.out.println("1. Area\n2. Parimeter");
+        System.out.println("1. Area\n2. Parimeter\n3. Diagonal");
         System.out.print("Choose : ");
         while (true) {
             vinput();
@@ -60,6 +60,14 @@ public class TwoD {
                 asw = Input * 4;
                 System.out.println("Answer : " + asw);
                 break;
+            }else if (Input == 3) {
+                System.out.println("2D/Square/Diagonal");
+                System.out.print("Side : ");
+                vinput();
+                int power = (Input * Input * 2);
+                asw = (int) Math.round(Math.sqrt(power));
+                System.out.println("Answer : " + asw + " !!!The answer maybe has been rounded!!!");
+                break;
             }else{
                 System.err.println("Error, Please enter what is in the options");
                 System.out.print("Please enter new input : ");
@@ -68,7 +76,7 @@ public class TwoD {
     }
 
     private void Rectangle(){
-        System.out.println("1. Area\n2. Parimeter");
+        System.out.println("1. Area\n2. Parimeter\n3. Diagonal");
         while (true) {
             System.out.print("Choose : ");
             vinput();
@@ -94,6 +102,18 @@ public class TwoD {
                 asw = (Leght + Widht) * 2;
                 System.out.println("Answer : " + asw);
                 break;
+            }else if (Input == 3) {
+                System.out.println("2D/Rectangle/Diagonal");
+                System.out.print("Leght : ");
+                vinput();
+                int Leght = Input;
+                System.out.print("Widht : ");
+                vinput();
+                int Widht = Input;
+                int power = (Leght * Leght) + (Widht * Widht);
+                asw = (int) Math.round(Math.sqrt(power));
+                System.out.println("Answer : " + asw + " !!!The answer maybe has been rounded!!!");
+                break;
             }else{
                 System.err.println("Error, Please enter what is in the options");
                 System.out.print("Please enter new input : ");
@@ -102,7 +122,7 @@ public class TwoD {
     }
 
     private void TriangleEL(){
-    System.out.println("1. Area\n2. Parimeter");
+    System.out.println("1. Area\n2. Parimeter\n3. Height");
         while (true) {
             System.out.print("Choose : ");
             vinput();
@@ -111,7 +131,7 @@ public class TwoD {
                 System.out.print("Side : ");
                 vinput();
                 asw = (Input * Input) / 2;
-                System.out.println("Answer : " + asw + " !!!The answer maybe has been rounded!!! ");
+                System.out.println("Answer : " + asw + " !!!The answer maybe has been rounded!!!");
                 break;
             }else if(Input == 2){
                 System.out.println("2D/Rectangle/Parimeter");
@@ -119,6 +139,13 @@ public class TwoD {
                 vinput();
                 asw = Input * 3;
                 System.out.println("Answer : " + asw);
+                break;
+            }else if(Input == 3){
+                System.out.println("2D/Trianggle (Equilateral)/Height");
+                System.out.print("Side : ");
+                vinput();
+                asw = (int) Math.round(Math.sqrt(3) / 2 * Input);
+                System.out.println("Answer : " + asw + " !!!The answer maybe has been rounded!!!");
                 break;
             }else{
                 System.err.println("Error, Please enter what is in the options");

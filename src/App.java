@@ -33,6 +33,7 @@ public class App {
                     break;
                 }else{
                     System.err.println("Error, Please enter what is in the options");
+                    System.out.print("Please enter new input : ");
                 }
             }
 
