@@ -8,7 +8,7 @@ public class TwoD {
     
     void main(){
 
-        System.out.println("1. Square\n2. Rectanggle\n3. Trianggle (Equilateral)");
+        System.out.println("1. Square\n2. Rectanggle\n3. Trianggle (Equilateral)\n4. Circle");
         System.out.print("Choose : ");
         while (true) {
             vinput();
@@ -20,6 +20,9 @@ public class TwoD {
                 break;
             }else if(Input == 3){
                 TriangleEL();
+                break;
+            }else if(Input == 4){
+                Circle();
                 break;
             }else{
                 System.err.println("Error, Please enter what is in the options");
@@ -77,8 +80,8 @@ public class TwoD {
 
     private void Rectangle(){
         System.out.println("1. Area\n2. Parimeter\n3. Diagonal");
+        System.out.print("Choose : ");
         while (true) {
-            System.out.print("Choose : ");
             vinput();
             if(Input == 1){
                 System.out.println("2D/Rectangle/Area");
@@ -123,8 +126,8 @@ public class TwoD {
 
     private void TriangleEL(){
     System.out.println("1. Area\n2. Parimeter\n3. Height");
+    System.out.print("Choose : ");
         while (true) {
-            System.out.print("Choose : ");
             vinput();
             if(Input == 1){
                 System.out.println("2D/Trianggle (Equilateral)/Area");
@@ -153,4 +156,31 @@ public class TwoD {
             }
         }
     }
+
+    private void Circle(){
+    float pi = 3.1415927f;
+    System.out.println("1. Area\n2. Circumference");
+    System.out.print("Choose : ");
+        while (true) {
+            vinput();
+            if(Input == 1){
+                System.out.println("2D/Circle/Circumference");
+                System.out.print("Radius : ");
+                vinput();
+                asw = (int) Math.round(pi * Input * Input);
+                System.out.println("Answer : " + asw + " !!!The answer maybe has been rounded (In this program Pi = " + pi + ")!!!");
+                break;
+            }else if(Input == 2){
+                System.out.println("2D/Circle/Circumference");
+                System.out.print("Radius : ");
+                vinput();
+                asw = (int) Math.round(pi * Input * 2);
+                System.out.println("Answer : " + asw + " !!!The answer maybe has been rounded (In this program Pi = " + pi + ")!!!");
+                break;
+            }else{
+                System.err.println("Error, Please enter what is in the options");
+                System.out.print("Please enter new input : ");
+            }
+        }
+    }     
 }
